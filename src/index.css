@@ -5,9 +5,123 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background:hsl(210, 36%, 96%);
+  color:#242424;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+main{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin:0 auto;
+}
+.container{
+  width:80vw;
+  max-width: 620px;
+}
+.title{
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.underline{
+  height: 0.25rem;
+  width:4rem;
+  background: #1f8bdd;
+  margin-left:auto;
+  margin-right: auto;
+}
+.review{
+  background:#ffffff;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+}
+.review:hover{
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+.image-container{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin:1.25rem auto;
+}
+.image-container::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background:#1f8bdd;
+  border-radius: 50%;
+  top:-0.25rem;
+  right:-0.5rem;
+}
+.person-image{
+  width:100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  object-fit: cover;
+  display: block;
+}
+.author{
+  margin-bottom: 0;
+}
+.job{
+  margin-top:0;
+  color:#1f8bdd;
+  font-weight: bold;
+}
+.info{
+  padding:1.25rem 3rem;
+  text-align: justify;
+}
+.quote-icon{
+  position: absolute;
+  left:0;
+  top:0;
+  height: 2.25rem;
+  width: 2.25rem;
+  display: grid;
+  place-items: center;
+  background:#1f8bdd;
+  color: #ffffff;
+  border-radius:50%;
+}
+.button-container{
+  margin-bottom: 0.5rem;
+}
+.prev-btn, .next-btn{
+  background:transparent;
+  border: transparent;
+  color:#1f8bdd;
+  padding:1.25rem;
+  font-size: 20px;
+  cursor: pointer;
+}
+.prev-btn:focus, .next-btn:focus{
+  outline: transparent;
+}
+.prev-btn:hover, .next-btn:hover{
+  color: #0a73c4;
+}
+.random-btn{
+  background:#1f8bdd;
+  color:#ffffff;
+  border: #1f8bdd;
+  margin-bottom: 1.25rem;
+  padding:8px 15px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.random-btn:hover{
+  background-color: #0a73c4;
 }

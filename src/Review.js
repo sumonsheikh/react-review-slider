@@ -32,10 +32,16 @@ import {FaChevronLeft, FaChevronRight, FaQuoteRight} from 'react-icons/fa';
              return checkNumber(newIndex);
          })
      }
+     
      //random review 
      const randomReview = () =>{
-
+        let randomNumber = Math.floor( Math.random() * people.length );
+        if( randomNumber === index ){
+            randomNumber = index + 1;
+        }
+        setIndex(checkNumber(randomNumber));
      }
+
     return (
         <article className="review">
             <div className="image-container">
